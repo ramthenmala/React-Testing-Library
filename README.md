@@ -80,3 +80,8 @@ toBeInTheDocument
 toContainHTML
 toHaveTextContent
 toBeFalsy
+
+## Describe
+
+- Group common tests
+

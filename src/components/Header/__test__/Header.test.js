@@ -1,11 +1,13 @@
-import {screen, render} from '@testing-library/react'
-import Header from '../Header.js'
+import { screen, render } from '@testing-library/react';
+import Header from '../Header.js';
 
-it('The element should be heading', ()=> {
-    render(<Header title="My Text"/>)
+describe('Header', () => {
+  it('The element should be heading', () => {
+    render(<Header title="My Text" />);
     const headingElement = screen.getByText('My Text');
-    expect(headingElement).toBeInTheDocument()
-})
+    expect(headingElement).toBeInTheDocument();
+  });
+});
 
 // it('should render same text as passed via prop', async () => {
 //     render(<Header title="my heading" />);
