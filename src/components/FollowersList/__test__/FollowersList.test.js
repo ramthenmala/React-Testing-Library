@@ -10,6 +10,21 @@ const MockFollowersList = () => {
     )
 }
 describe('FollowersList', () => {
+  beforeEach(()=> {
+    console.log('RUNNING BEFORE EACH TEST')
+  })
+
+  beforeAll(() => {
+    console.log('RUNNING ONCE BEFORE ALL TEST');
+  });
+
+  afterEach(() => {
+    console.log('RUNNING AFTER EACH TEST');
+  });
+
+  afterAll(() => {
+    console.log('RUNNING ONCE AFTER ALL TEST');
+  });
   it('Should render follower item', async () => {
     render(<MockFollowersList />);
     const followerDivElement = await screen.findByTestId('data-item-0');
